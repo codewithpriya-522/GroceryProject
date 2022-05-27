@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace GrocryProject
 {
@@ -25,6 +26,20 @@ namespace GrocryProject
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            GetUiProductTypeName();
+        }
+        private void GetUiProductTypeName()
+        {
+            BLLproductInsert bLLproduct = new BLLproductInsert();
+            List<string> PTypeNames = bLLproduct.GetProductTypeName();
+            foreach(string PTypeName in PTypeNames)
+            {
+                comboBox1.Items.Add(PTypeName);
+            }
         }
     }
 }

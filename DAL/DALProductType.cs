@@ -10,9 +10,7 @@ namespace DAL
 {
     public class DALProductType
     {
-        //avabe proc likhle kaj korbe na 
         string _productType;
-        public string _ProductTypeName{ get; set; }
         public string ProductType { get => _productType; set => _productType = value; }
 
         public int InsertProductType()

@@ -7,8 +7,12 @@ using DAL;
 
 namespace BLL
 {
-    class BLLproductInsert
+    public class BLLproductInsert
     {
-
+        public List<string>GetProductTypeName()
+        {
+            DAL.DALproductInsert productTName = new DALproductInsert();
+            return productTName.DALloadProductTypeData();
+        }
     }
 }

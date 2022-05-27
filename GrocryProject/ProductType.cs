@@ -27,7 +27,7 @@ namespace GrocryProject
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            InsertProdctTypeData();
         }
         private void InsertProdctTypeData()
         {
